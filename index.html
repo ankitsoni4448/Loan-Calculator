@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1 class="heading">Loan Calculator</h1>
-        <p>Loan Amount $ <input type="number" id="Loan-amount" min="1" max="1000000" value="10000"></p>
-        <p>Interest Rate % <input type="number" id="interest-rate" min="0" max="100" value="10" step=".1"></p>
-        <p>Month to Pay <input type="number" id="months-to-pay" min="6" max="48" value="12"></p>
-        <p>Monthly Payment</p>
+        <p>Loan Amount $ <input onchange="calculateLoan()" class="raw" type="number" id="loan-amount" min="1" max="1000000" value="10000"></p>
+        <p>Interest Rate % <input onchange="calculateLoan()" class="raw" type="number" id="interest-rate" min="0" max="100" value="10" step=".1"></p>
+        <p>Month to Pay <input onchange="calculateLoan()" class="raw" type="number" id="months-to-pay" min="6" max="48" value="12"></p>
+        <p class="payment" id="payment">Monthly Payment</p>
 
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
